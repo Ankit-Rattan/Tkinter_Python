@@ -5,13 +5,10 @@ root.geometry("600x500")
 root.title("Travel Form")	
 
 def getval():
-    print(nameval.get())
-    print(phoneval.get()),padx="10"
-    print(genderval.get())
-    print(modeval.get())
-    print(foodserval.get())
-    
-    
+    print("Submitted Form")
+    # print(f"{nameval.get(), phoneval.get(), genderval .get(), modeval.get(), foodserval.get()}")
+    with open("travel_form.txt", "a") as f:
+        f.write(f"{nameval.get(), phoneval.get(), genderval.get(), modeval.get(), foodserval.get()}\n")
 
 Label(root, text="Treavel Form", font="bold", pady=15).grid(row=0, column=4)
 
